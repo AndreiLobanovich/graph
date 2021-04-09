@@ -38,10 +38,8 @@ vector<int> *Graph::DFS(string startVertex)
     flag = 0;
     while (flag != -1)
     {
-        cin >> a;
-        cout << flag << ' ';
         index2 = 0;
-        while (weights[index][index2])
+        while (index2 < size)
         {
             if (weights[index][index2] != 0 && !is_present(index2, explored))
             {
@@ -53,8 +51,8 @@ vector<int> *Graph::DFS(string startVertex)
         }
         if (index2 == size)
         {
-            index = explored[flag];
             flag--;
+            index = explored[flag];
         }
     } 
     return &explored;

@@ -30,8 +30,10 @@ int main()
     cout << "Average degree: " << setprecision(2) << g->AverageDegree() << endl;
     g->Display();
     tst = g->DFS("A");
+    // tst = g->BFS("A");
     for (int i = 0; i < tst->size(); i++)
         cout << tst[0][i]<< ' ';
+    cout << endl;
     
 
 
